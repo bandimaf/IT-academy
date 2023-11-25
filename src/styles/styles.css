@@ -1,5 +1,16 @@
 .body {
-    font-family: "Open-Sans", sans-serif;;
+    font-family: "Open-Sans", sans-serif;
+    margin-top: 0;
+    margin-left: 0;
+}
+.btm {
+    padding: 15px 40px;
+    text-decoration: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    text-align: center;
 }
 
 .header {
@@ -8,7 +19,9 @@
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
-    gap: 10%;
+    gap: 9%;
+    position: fixed;
+    width: 100%;
     max-height: 147px;;
     background-color: var(--1-header, rgba(222, 222, 222, 0.50));
     backdrop-filter: blur(10px);
@@ -23,7 +36,7 @@
     gap: 50px;
 }
 
-.link {
+.header__nav-link {
     color: var(--1, #1F1E1E);
     text-align: center;
     font-size: 18px;
@@ -31,4 +44,70 @@
     font-weight: 600;
     line-height: normal;
     text-decoration: none;
+}
+
+.header__btm {
+    color: var(--1, #1F1E1E);
+    border: 1px solid var(--1, #1F1E1E);
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 147px;
+    width: 100%;
+}
+
+.main-header__title,
+.main-header__text {
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-transform: uppercase;
+    font-family: Lora;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.home__offers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home__offers-text {
+    color: var(--1, #1F1E1E);
+    text-align: center;
+    font-family: Lora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.44px;
+    text-transform: uppercase;
+}
+
+.home__offers-btm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    flex-shrink: 0;
+    gap: 10%;
+}
+
+.home__offers-btm-event {
+    background-color: #BC3324;
+    color: var(--1, #FFF);
+    border: 1px solid var(--1, #BC3324);
+    flex-shrink: 0;
+}
+
+.home__offers-btm-tenat {
+    color: var(--1, #1F1E1E);
+    border: 1px solid var(--1, #1F1E1E);
+    flex-shrink: 0;
 }
