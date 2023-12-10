@@ -16,44 +16,50 @@
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    gap: 9%;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 147px;
-    background-color: var(--1-header, rgba(222, 222, 222, 0.50));
-    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.header__container,
+.events__container {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1414px;
+    width: 100%;
 }
 
 .header__logo {
-    height: 100%;
+    display: inline-block;
+    width: 202px;
+    height: 147px;
 }
 
 .header__nav {
-    display: flex;
-    flex-direction: row;
-    flex-shrink: 0;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    display: inline-block;
 }
 
 .header__nav-link {
-    color: var(--1, #1F1E1E);
-    text-align: center;
+    margin: 0 25px;
+    color: #0000;
     font-size: 18px;
     font-weight: 600;
-    line-height: normal;
+    line-height: 25px;
     text-decoration: none;
 }
 
 .header__btm {
-    color: var(--1, #1F1E1E);
-    border: 1px solid var(--1, #1F1E1E);
+    color: @black;
+    border: 1px solid @black;
 }
 
 .home {
@@ -130,7 +136,9 @@
     flex-shrink: 0;
 }
 
-.home__listing-events {
+.events {
+    padding-top: 147px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -138,73 +146,120 @@
     gap: 70px;
 }
 
-.listing-events__title-container {
-    background-color: var(--1, #1F1E1E);
-    padding: 0 45px;
+.events__container {
+    flex-direction: column;
 }
 
-.listing-events__title {
-    color: var(--1, #FFF);
-    text-align: center;
+.events_title {
+    align-items: center;
+    margin-bottom: 150px;
+}
 
+.title {
+    margin: 0 0 150px;
+    box-sizing: border-box;
+    padding: 7px 45px 9px ;
+    max-width: 624px;
+    width: 100%;
+    text-align: center;
+    background-color: #1F1E1E;
+    text-transform: uppercase;
     font-family: Lora;
     font-size: 36px;
     font-weight: 500;
     line-height: normal;
-    text-transform: uppercase;
-    width: 533px;
-    height: 46px;
+    color: #FFF;
 }
 
-.listing-events__cards {
+.listing {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
+    flex-wrap: wrap;
+    gap: 120px 60px;
 }
 
-.listing-events__card-container {
+.listing__card-event {
+    max-width: 405px;
+    width: calc(33.333% - 40px);
+}
+
+.card-event {
+    box-sizing: border-box;
+}
+
+.card-event__picture {
+    position: relative;
+    display: block;
+    margin-bottom: 25px;
+    
+}
+
+.card-event__picture::before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 107.160%;
+
+}
+
+.card-event__picture-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-event__link {
+    text-decoration: none;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    width: 405px;
-    text-decoration: none;
+    height: 100%;
 }
 
-.listing-events__card-text-container {
+.card-event__link:hover .card-event__title {
+    color: #A51505;
+    text-decoration-color: #A51505;
+}
+
+/* .listing-events__card-text-container {
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
+} */
 
-.listing-events__card-title {
-    color: var(--1, #1F1E1E);
+
+
+.card-event__title {
+    margin: 0 0 auto;
+    min-height: 64px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    color: #1F1E1E;
     font-size: 24px;
+    font-style: normal;
+    font-family: 'Open Sans';
     font-weight: 700;
     line-height: normal;
-
-    /* костыли */
-    margin-top: 0;
-    margin-bottom: 0;
-    text-decoration: none;
+    transition: color 0.2s, text-decoration-color 0.23s;
 }
 
-.listing-events__card-discription {
-    color: var(--1, #1F1E1E);
+.card-event-text {
+    margin: 15px 0;
     font-size: 16px;
     font-weight: 400;
-
-    /* костыли */
-    margin-top: 0;
-    margin-bottom: 0;
-    text-decoration: none;
+    font-style: normal;
+    line-height: normal;
+    color: #1F1E1E;
 }
 
-.listing-events__card-date {
-    color: var(--1, #1F1E1E);
+.card-event-time {
+    margin-top: auto;
+    display: block;
+    color: #1F1E1E;
     font-size: 14px;
     font-weight: 300;
+    font-style: normal;
 
     /* костыли */
     margin-top: 0;
