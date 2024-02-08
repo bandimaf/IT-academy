@@ -1,41 +1,62 @@
-            <div class="events">
-                <section class="listing events__listing">
-                    <h2 class="listing__title section-title">мероприятия</h2>
-                    <div class="listing__events-list">
-                    <!-- <div class="events__list listing"> -->
-                        <!-- prettier-ignore  -->
-                        @@loop("event-card.html", [
-                        {
-                            "class": "listing__card-event",
-                            "img": "assets/images/about1.jpg",
-                            "img_webp": "assets/images/about1.wbp",
-                            "alt": "nirvana",
-                            "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
-                            "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
-                            "time": "07.12.2022 | начало 18.00",
-                            "datetime": "2022-12-07T18:00"
+<div class="events">
+    <section class="listing events__listing">
+        <h2 class="listing__title section-title">мероприятия</h2>
+        <div class="listing__events-list">
+        <!-- <div class="events__list listing"> -->
+            <!-- prettier-ignore  -->
+            @@loop("event-card.html", [
+            {
+                "class": "listing__card-event",
+                "img": "assets/images/about1.jpg",
+                "img_webp": "assets/images/about1.wbp",
+                "alt": "nirvana",
+                "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
+                "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                "time": "07.12.2022 | начало 18.00",
+                "datetime": "2022-12-07T18:00"
 
-                        },
-                        {
-                            "class": "listing__card-event",
-                            "img": "HowStuffWorks.png",
-                            "alt": "HowStuffWorks",
-                            "title": "Есть тема, нужно обсудить с HowStuffWorks",
-                            "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
-                            "time": "14.12.2022 | начало 18.30",
-                            "datetime": "2022-12-14T18:30"
+            },
+            {
+                "class": "listing__card-event",
+                "img": "HowStuffWorks.png",
+                "alt": "HowStuffWorks",
+                "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+                "time": "14.12.2022 | начало 18.30",
+                "datetime": "2022-12-14T18:30"
 
-                        },
-                        {
-                            "class": "listing__card-event",
-                            "img": "assets/images/Sade.png",
-                            "alt": "sade",
-                            "title": "Вечер | The Best of Sade",
-                            "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
-                            "time": "16.12.2022 | начало 20.00",
-                            "datetime": "2022-12-16T20:00"
+            },
+            {
+                "class": "listing__card-event",
+                "img": "assets/images/Sade.png",
+                "alt": "sade",
+                "title": "Вечер | The Best of Sade",
+                "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                "time": "16.12.2022 | начало 20.00",
+                "datetime": "2022-12-16T20:00"
 
-                        },
-                        ])
-                    </div>
-                </section>
+            },
+            ])
+        </div>
+        <div class="listing__slider slider">
+            <button type="button" class="slider__left">
+                <svg class="slider__icon" width="91px" height="60px">
+                    <use xlink:href="assets/icons/symbols.svg#slider_left">
+                </svg>
+            </button>
+            <svg class="slider__procces" width="99px" height="2px">
+                <use xlink:href="assets/icons/symbols.svg#slider_procces">
+            </svg>
+            <button type="button" class="slider__right">
+                <svg class="slider__icon" width="91px" height="60px">
+                    <use xlink:href="assets/icons/symbols.svg#slider_right">
+                </svg>
+            </button>
+        </div>
+
+        <a href="#" class="listing__link-all link">
+            <span class="link__name">Смотреть все</span>
+        </a>
+
+    </section>
+</div>
