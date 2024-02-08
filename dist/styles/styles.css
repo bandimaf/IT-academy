@@ -106,6 +106,31 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
+.link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  height: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1e1e;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+.link:active {
+  color: #bc3324;
+}
+.link__name,
+.link__icon {
+  cursor: pointer;
+}
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -437,7 +462,15 @@ img {
   width: calc(33.3333% - 60px);
   margin: 0 30px 120px;
 }
-.offers {
+.offers__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 147px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +485,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 140px;
 }
 .offers__text {
   color: var(--1, #1F1E1E);
@@ -506,6 +540,148 @@ img {
 }
 .events__listing {
   margin-bottom: 100px;
+}
+.about {
+  padding-bottom: 90px;
+}
+.about__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.about__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about__title {
+  margin: 0 0 50px;
+  font-weight: 700;
+  font-size: 44px;
+  color: #1f1e1e;
+}
+.about__title--w868 {
+  max-width: 868px;
+  width: 100%;
+}
+.about__title--mt {
+  margin-top: -120px;
+}
+.about__text {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin: 0 0 100px;
+  max-width: 870px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: #1f1e1e;
+}
+.about__text--mb90 {
+  margin-bottom: 90px;
+}
+.about__picture {
+  position: relative;
+  display: block;
+  width: 65.217%;
+}
+.about__picture::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 66.322%;
+}
+.about__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.about__block2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.about__picture2 {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  position: relative;
+  display: block;
+  margin-top: -280px;
+  max-width: 404px;
+  width: 30.284%;
+}
+.about__picture2::before {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 122.29%;
+}
+.about__block3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 60px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.about__picture3 {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 930px;
+  width: 100%;
+  padding: 18px 9px 0 49px;
+}
+.about__picture3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65%;
+  background-color: #bc3324;
+}
+.about__picture3::after {
+  content: '';
+  display: block;
+  width: 100%;
+  padding-top: 40.86%;
+}
+.about__img2 {
+  position: absolute;
+  top: 18px;
+  left: 49px;
+  right: 9px;
+  bottom: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: calc(100%-50%);
+}
+.about__block3-wrapper {
+  max-width: 344px;
+  width: 100%;
 }
 .header {
   position: fixed;
@@ -586,6 +762,7 @@ img {
   overflow-y: auto;
   z-index: 110;
   background-color: #dedede;
+  display: none;
 }
 @supports ((-webkit-backdrop-filter: blur(25px)) or (backdrop-filter: blur(25px))) {
   .pp {
@@ -725,6 +902,9 @@ img {
   white-space: nowrap !important;
 }
 @media (hover: hover) {
+  .link:hover {
+    color: #bc3324;
+  }
   .pp__sticky-btn:hover {
     background-color: #a51505;
   }
