@@ -1,0 +1,93 @@
+.blog-card {
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__link {
+        display: flex;
+        justify-content: flex-start;
+        max-width: 1334px;
+        max-height: 670px;
+        text-decoration: none;
+    }
+    &__picture {
+        margin-right: 60px;
+        max-width: 467px;
+        max-height: 291px;
+        width: 100%;
+    }
+
+    &__picture-img {
+        object-fit: contain;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 26px;
+        margin-bottom: 26px;
+
+
+        max-width: 467px;
+        padding-right: 69px;
+    }
+
+    &__date {
+        color: @black;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    &__name {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32.68px;
+        color: @black;
+        transition: color 0.2s;
+        text-decoration: underline;
+        text-decoration-color: transparent;
+        transition: color 0.2s, text-decoration-color 0.23s;
+    }
+
+    &__text {
+        color: @black;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21.79px;
+    }
+
+    &__button-icon {
+        padding-left: 133px;
+        border: none;
+        color: @black;
+        background-color: transparent;
+        transition: color 0.2s;
+    }
+
+    &__link:hover &__name {
+        color: @red;
+        text-decoration-color: @red;
+        &:hover &__button-icon {
+            color: @red;
+        }
+    }
+
+    &__link:hover &__button-icon {
+        color: @red;
+    }
+
+    &__link-button {
+        display: flex;
+        align-items: end;
+        margin-bottom: 26px;
+    }
+
+    &--border {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 1px solid @black;
+        border-bottom: 1px solid @black;
+    }
+}
