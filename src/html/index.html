@@ -2,16 +2,11 @@
 <html lang="ru">
     @@include('blocks/head.html')
     <body class="body">
-        @@include('blocks/header.html')
-        <main class="main">
-            @@include('blocks/main-header.html')
-            @@include('blocks/offers.html')
-            @@include('blocks/about.html', {class: "home__about"})
-            @@include('blocks/events.html', {class: "home__events"})
-            @@include('blocks/blog.html', {class: "home__blog"})
-            @@include('blocks/contacts.html', {class: "home__contacts"})
-        </main>
-        @@include('blocks/footer.html')
-        @@include('blocks/event-pp.html')
+        <div class="nav-page">
+            <a href="home.html" class="nav-page__link">Главная</a>
+            <a href="events.html" class="nav-page__link">Листинг</a>
+            <a href="event.html" class="nav-page__link">Мероприятие</a>
+            <a href="for-pp.html" class="nav-page__link">Форма заявки</a>
+        </div>
     </body>
 </html>

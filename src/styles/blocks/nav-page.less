@@ -1,0 +1,25 @@
+.nav-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    &__link {
+        box-sizing: border-box;
+        padding: 15px 20px;
+        max-width: 400px;
+        width: 100%;
+        font-family: @font1;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        background-color: transparent;
+        border: 1px solid @black;
+        transition: backgrond-color 0.4s, color 0.4s;
+        &:hover {
+            background-color: @black;
+            color: @white;
+        }
+    }
+}

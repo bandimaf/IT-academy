@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('blocks/head.html')
+
+<body class="body">
+    @@include('blocks/header.html')
+    <main class="main">
+        @@include('blocks/breadcrumbs.html')
+        <article class="event">
+            <div class="event__container">
+                <div class="event__content content">
+                        @@include('blocks/event-description.html') 
+                        @@include('blocks/reserve.html', {class: " event__reserve"}) 
+                </div>
+            </div>
+        </article>
+    </main>
+    @@include('blocks/footer.html')
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('blocks/head.html')
+
+<body class="body">
+    @@include('blocks/header.html')
+    <main class="main">
+        <article class="home">
+            @@include('blocks/event-pp.html')
+            <section class="home__header">
+                @@include('blocks/main-header.html')
+            </section>
+            <section class="home__offers">
+                @@include('blocks/offers.html')
+            </section>
+            <section class="home__about">
+                @@include('blocks/about.html', {class: "home__about"})
+            </section>
+            <section class="home__events">
+                @@include('blocks/events.html', {class: "home__events"})
+            </section>
+            <section class="home__blog">
+                @@include('blocks/blog.html', {class: "home__blog"})
+            </section>
+            <section class="home__contacts">
+                @@include('blocks/contacts.html', {class: "home__contacts"})
+            </section>
+            <section class="home__main-footer">
+                <p class="home__top-phrase">Просто делайте, что нравит</p>
+                <p class="home__bottom-phrase">а мы вам помож</p>
+            </section>
+        </article>
+    </main>
+    @@include('blocks/footer.html')
+</body>
+
+</html>
