@@ -24,6 +24,16 @@ body {
   line-height: 1.375;
   overflow-x: hidden;
   padding-top: 147px;
+
+  @media @bw1660 {
+    background-image: url(../assets/images/noise.png), url(../assets/images/bg_1340.png);
+  }
+  @media @bw1340 {
+    background-image: url(../assets/images/noise.png), url(../assets/images/bg_768.png);
+  }
+  @media @bw768 {
+    background-image: url(../assets/images/noise.png), url(../assets/images/bg_320.png);
+  }
 }
 
 .main {
@@ -74,6 +84,10 @@ img {
   border: 1px solid @black;
   color: @black;
   transform: background-color 0.2s, color 0.2s;
+
+  @media @bw1340 {
+    font-size: 14px;
+  }
 
   &--plr40 {
     padding: 15px 40px;

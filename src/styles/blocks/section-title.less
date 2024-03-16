@@ -15,12 +15,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  &--services {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 30px;
-  }
-
   @media @bw1660 {
     margin-bottom: 130px;
   }
@@ -33,10 +27,21 @@
   }
 
   @media @bw768 {
+    max-width: 405px;
     min-height: 42px;
     margin-bottom: 80px;
     padding: 11px 20px;
     font-size: 20px;
+  }
+
+  &--services {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    
+    @media @bw768 {
+      font-size: 16px;
+    }
   }
 
   // @media @bw600 {

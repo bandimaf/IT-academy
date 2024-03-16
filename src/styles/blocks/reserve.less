@@ -47,6 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    
   }
 
   &__legend {
@@ -79,6 +80,7 @@
   &__scheme-title {
     margin: 0 0 40px;
     padding: 6px 56px;
+    text-align: center;
     background-color: @black;
     color: @white;
     font-weight: 600;
@@ -97,12 +99,12 @@
   &__scheme-wrapper {
     position: relative;
     width: 100%;
-    // &::after {
-    //   content: "";
-    //   display: block;
-    //   width: 100%;
-    //   padding-top: 51.15384%;
-    // }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 51.15384%;
+    }
   }
 
   &__scene {
@@ -112,9 +114,6 @@
     width: 100%;
     height: 100%;
   }
-
-  &__tickets-list {}
-
 
   &__tickets {
     display: flex;

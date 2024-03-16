@@ -4,6 +4,10 @@
 
     &__container {
         .container;
+        @media @bw768 {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &__border {
          display: flex;
@@ -28,7 +32,10 @@
     &__wrapper {
         display: flex;
         justify-content: space-between;
-
+        @media @bw768 {
+            flex-direction: column;
+            gap: 59px;
+        }
     }
 
     &__nav {
@@ -38,6 +45,10 @@
         display: flex;
         flex-direction: column;
         gap: 22px;
+
+        @media @bw768 {
+            margin-left: 20px;
+        }
 
         &::before {
            content: '';

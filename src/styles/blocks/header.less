@@ -39,16 +39,44 @@
         display: flex;
         align-items: center;
         z-index: 1;
+        @media @bw1660 {
+            height: 111px;
+        }
+    
+        @media @bw768 {
+            height: 70px;
+            padding: 0;
+        }
     }
 
     &__logo {
         display: inline-block;
         width: 202px;
         height: 147px;
+        
 
         @media @bw768 {
             width: 96px;
             height: 70px;
+        }
+        @media @bw1660 {
+
+            width: 152px;
+            height: 111px;
+        }
+    }
+
+    &__logo-img {
+        width: 202px;
+        height: 147px;
+
+        @media @bw768 {
+            width: 96px;
+            height: 70px;
+        }
+        @media @bw1660 {
+            width: 152px;
+            height: 111px;
         }
     }
 
@@ -74,14 +102,13 @@
         //   раскомментируем следующее свойство,
         //   чтобы скрыть наше меню:
         //   */
-            // //   transform: translateX(-100%);
-            //   overflow-x: hidden;
-            //   overflow-y: auto;
-            //   @supports (backdrop-filter: blur(20px)) {
-            //     background-color: fade(@gray, 70%);
-            //     backdrop-filter: blur(20px);
-            //   }
-            // }
+              transform: translateX(-100%);
+              overflow-x: hidden;
+              overflow-y: auto;
+              @supports (backdrop-filter: blur(20px)) {
+                background-color: fade(@gray, 70%);
+                backdrop-filter: blur(20px);
+              }
         }
     }
 

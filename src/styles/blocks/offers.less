@@ -19,15 +19,24 @@
         letter-spacing: 0.44px;
         text-transform: uppercase;
         margin-top: 0;
+
+        @media @bw768 {
+            font-size: 13px;
+        }
     }
 
-    &__btm {
+    &__btms {
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-self: center;
         flex-shrink: 0;
         gap: 106.12px;
+
+        @media @bw768 {
+            flex-direction: column-reverse;
+            gap: 25px;
+        }
     }
 
     &__btm-event {

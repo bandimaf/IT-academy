@@ -1,11 +1,12 @@
 .events {
 
-    padding: 120px 0 84px;
-    // margin-bottom: 90px;
-
-
-    &__listing {
-        // margin-bottom: 100px;
+    padding: 138px 0 90px;
+  
+    @media @bw1340 {
+        padding: 91px 0 40px;
+    }
+    @media @bw768 {
+        padding: 0 0 40px;
     }
 
     &--block {
@@ -17,7 +18,7 @@
     &__show-more {
         display: block;
         margin: 0 auto;
-        padding-top: 100px;
+        padding-top: 70px;
         margin-bottom: 100px;
         // position: relative;
         // top: -50px;
@@ -28,6 +29,14 @@
         transition: color 0.2s;
         &:hover {
             color: @red;
+        }
+
+        @media @bw1660 {
+            padding-top: 60px;
+        }
+
+        @media @bw768 {
+            padding-top: 50px;
         }
     }
 
@@ -50,13 +59,38 @@
         margin: 0 0 60px;
         font-size: 16px;
         line-height: 22px;
+
+        @media @bw1340 {
+            font-size: 14px;
+        }
+
+        @media @bw768 {
+            font-size: 13px;
+        }
     }
 
     &__info-wrapper {
         .container;
         margin-top: 100px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media @bw1340 {
+            &:last-child {
+                justify-content: center;
+            }
+        }
+
+        @media @bw768 {
+            margin-top: 90px;
+            padding: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
     }
 
     &__info-item {
@@ -65,6 +99,18 @@
         align-items: center;
         max-width: 401px;
 
+        @media @bw1340 {
+            margin: 0 50px 50px 50px;
+            max-width: 280px;
+            &:last-child {
+                margin-top: 0;
+            }
+        }
+
+        @media @bw768 {
+            margin: 0;
+            min-width: 224px;
+        }
     }
 
     &__info-text {
