@@ -1,36 +1,91 @@
 .blog-card {
-    margin-bottom: 30px;
-    &:last-child {
-        margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+        content: '';
+        margin-top: 60px;
+        @media @bw768 {
+            margin-top: 40px;
+        }
     }
+
+    &::after {
+        content: '';
+        margin-top: 60px;
+        width: 1257px;
+        height: 1px;
+        background-color: @black;
+        @media @bw1340 {
+            max-width: 708px;
+        }
+        @media @bw768 {
+            margin-top: 40px;
+            width: 100%;
+        }
+    }
+
+    &:last-child {
+        &::after {
+            margin-top: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    &:first-child {
+        &::before {
+            margin-top: 0;
+        }
+    }
+
     &__link {
         display: flex;
         justify-content: flex-start;
-        max-width: 1334px;
-        max-height: 670px;
+        width: 100%;
+        // max-height: 670px;
         text-decoration: none;
+
+        @media @bw1340 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 708px;
+        }
+            
     }
+
     &__picture {
         margin-right: 60px;
         max-width: 467px;
-        max-height: 291px;
         width: 100%;
+
+        @media @bw1340 {
+            margin: 0;
+            max-width: 708px;
+
+        }
     }
 
     &__picture-img {
-        object-fit: contain;
+        object-fit: cover;
+        width: 100%;
     }
 
     &__wrapper {
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-top: 26px;
         margin-bottom: 26px;
+        width: 100%;
+        @media @bw768 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
 
-
-        max-width: 467px;
-        padding-right: 69px;
     }
 
     &__date {
@@ -58,17 +113,35 @@
         line-height: 21.79px;
     }
 
+    &__link-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        @media @bw768 {
+            flex-direction: column;
+            align-items: normal;
+        }
+    }
+
+    &__description {
+        max-width: 467px;
+    }
+
     &__button-icon {
-        padding-left: 133px;
+        // padding-left: 133px;
         border: none;
         color: @black;
         background-color: transparent;
         transition: color 0.2s;
+        @media @bw768 {
+            margin-top: 20px;
+        }
     }
 
     &__link:hover &__name {
         color: @red;
         text-decoration-color: @red;
+
         &:hover &__button-icon {
             color: @red;
         }
@@ -81,13 +154,13 @@
     &__link-button {
         display: flex;
         align-items: end;
-        margin-bottom: 26px;
+        // margin-bottom: 26px;
     }
 
-    &--border {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-top: 1px solid @black;
-        border-bottom: 1px solid @black;
-    }
+    // &--border {
+    //     padding-top: 30px;
+    //     padding-bottom: 30px;
+    //     border-top: 1px solid @black;
+    //     border-bottom: 1px solid @black;
+    // }
 }
