@@ -16,7 +16,7 @@
                 @@include('blocks/about.html', {class: "home__about"})
             </section>
             <section class="home__events">
-                @@include('blocks/events.html', {class: "home__events"})
+                @@include('blocks/upcoming.html', {class: "home__events"})
             </section>
             <section class="home__blog">
                 @@include('blocks/blog.html', {class: "home__blog"})
@@ -25,12 +25,14 @@
                 @@include('blocks/contacts.html', {class: "home__contacts"})
             </section>
             <section class="home__main-footer">
-                <p class="home__top-phrase">Просто делайте, что нравит</p>
-                <p class="home__bottom-phrase">а мы вам помож</p>
+                <p class="home__main-footer-text">Просто делайте, что нравится, а мы вам поможем</p>
             </section>
         </article>
     </main>
     @@include('blocks/footer.html')
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

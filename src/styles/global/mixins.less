@@ -49,3 +49,37 @@
     overflow: hidden !important;
     white-space: nowrap !important;
 }
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+  .page-header__nav {
+    @media @bw1020 {
+      transition: transform 0.4s;
+      transform: translateX(0);
+    }
+  }
+  .page-header__nav-toggle {
+    &::before {
+      transition: transform 0.4s;
+      transform: translate(0px, 6px) rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transition: transform 0.4s;
+      transform: translate(0px, -6px) rotate(-45deg);
+    }
+  }
+}
+
+.show-event-popup {
+  body {
+    overflow: hidden;
+  }
+  #js-eventPP {
+    display: flex;
+  }
+}
