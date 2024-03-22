@@ -1846,8 +1846,8 @@ textarea {
   max-width: 868px;
   width: 100%;
 }
-.about__title--mt {
-  margin-top: -120px;
+.about__title--2 {
+  grid-area: title;
 }
 .about__text {
   -ms-flex-item-align: end;
@@ -1859,13 +1859,17 @@ textarea {
   font-size: 18px;
   color: #1f1e1e;
 }
+.about__text--2 {
+  grid-area: text;
+  margin-left: auto;
+}
 .about__text--mb90 {
   margin-bottom: 90px;
 }
 .about__picture {
+  grid-area: picture1;
   position: relative;
   display: block;
-  width: 65.217%;
 }
 .about__picture::before {
   content: '';
@@ -1883,22 +1887,16 @@ textarea {
      object-fit: contain;
 }
 .about__block2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-areas: "picture1 picture1 picture2" "title title picture2" "text text text";
+  gap: 60px;
+  grid-template-columns: 1fr 1fr 404px;
 }
 .about__picture2 {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  grid-area: picture2;
+  align-self: flex-end;
   position: relative;
   display: block;
-  margin-top: -280px;
-  max-width: 404px;
-  width: 30.284%;
 }
 .about__picture2::before {
   content: '';
