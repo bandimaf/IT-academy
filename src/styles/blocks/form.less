@@ -2,22 +2,55 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        // justify-content: space-between;
         row-gap: 30px;
-        column-gap: 60px;
+        column-gap: 6%;
         width: 100%;
         &--mb50 {
             margin-bottom: 50px;
         }
+        &--nowrap {
+            flex-wrap: nowrap;
+            @media @bw768 {
+                flex-wrap: wrap;
+            }
+        }
+        @media @bw768 {
+            column-gap: 0;
+            justify-content: space-between;
+        }
+        // @media @bw768 {
+        //     flex-direction: column;
+        // }
     }
     &__group {
-        width: calc(50% - 30px);
+        // width: calc(50% - 15px);
+        max-width: 438px;
+        width: 100%;
+        // @media @bw1340 {
+        //     width: 100%;
+        //     min-width: 290px;
+        //     max-width: 405px;
+        // }
+        // @media @bw768 {
+        //     width: 100%;
+        //     max-width: 289px;
+        //     min-width: 240px;
+        // }
+        // max-width: 405px;
+        // min-width: 240px;
+        @media @bw1340 {
+            width: calc(50% - 15px);
+        }
     }
 
     &__field {
         display: block;
+        // max-width: 405px;
         width: 100%;
         &--w50 {
             width: calc(50% - 30px);
+            min-width: 240px;
         }
         &--mb30 {
             margin-bottom: 30px;
@@ -25,12 +58,25 @@
     }
 
     &__btn {
-        padding: 15px 156px;
+        padding: 15px 0;
+        width: calc(50% - 30px);
+        min-width: 240px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        @media @bw768 {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__btn-close {
-        margin-left: 200px;
-        padding: 0;
+        // margin-left: 200px;
+        padding: 15px 0;
+        width: calc(50% - 30px);
+        min-width: 240px;
         border: none;
         text-decoration: underline;
         &:hover {

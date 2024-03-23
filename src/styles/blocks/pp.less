@@ -15,6 +15,21 @@
         backdrop-filter: blur(25px);
     }
 
+    @media @bw1660 {
+        min-width: 1144px;
+        padding: 90px 40px 50px;
+    }
+
+    @media @bw1340 {
+        min-width: 688px;
+        padding: 72px 40px 50px;
+    }
+
+    @media @bw768 {
+        min-width: 280px;
+        padding: 80px 20px 50px;
+    }
+
     &__container {
         box-sizing: border-box;
         display: flex;
@@ -28,6 +43,15 @@
         background-repeat: repeat;
         background-position: 0 0;
         background-size: auto;
+        @media @bw1660 {
+            padding: 70px 137px 40px;
+        }
+        @media @bw1340 {
+            padding: 70px 40px 41px;
+        }
+        @media @bw768 {
+            padding: 51px 20px 40px;
+        }
     }
 
     &__title {
@@ -83,5 +107,13 @@
     &__form {
         min-width: 870px;
         margin: auto;
+        @media @bw1340 {
+            max-width: 869px;
+            min-width: 608px;
+        }
+        @media @bw768 {
+            max-width: 607px;
+            min-width: 240px;
+        }
     }
 }

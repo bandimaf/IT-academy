@@ -31,6 +31,11 @@
         color: @black;
     }
 
+    &__select {
+        width: 100%;
+        min-width: 240px;
+    }
+
     &__select,
     &__input {
         height: 55px;
@@ -45,7 +50,8 @@
             width: 55px;
         }
         &--w110 {
-            width: 110px;
+            max-width: 110px;
+            min-width: 99px;
         }
         &--datetime {
             padding: 17px 13px 16px;
